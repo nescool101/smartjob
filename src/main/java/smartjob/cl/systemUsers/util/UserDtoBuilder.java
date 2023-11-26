@@ -36,7 +36,7 @@ public class UserDtoBuilder {
                 .dateCreated(LocalDateTime.now())
                 .lastModified(LocalDateTime.now())
                 .lastLogin(LocalDateTime.now())
-                .userIsActive(Boolean.TRUE)
+                .userIsActive(Boolean.FALSE)
                 .build();
     }
 

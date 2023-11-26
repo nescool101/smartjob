@@ -44,7 +44,7 @@ public class UserEntity {
 
     private LocalDateTime lastLogin;
 
-    @Column(name = "userIsActive", columnDefinition = "boolean default true")
+    @Column(name = "userIsActive", columnDefinition = "boolean default false")
     private Boolean userIsActive;
 
     @OneToMany(cascade = CascadeType.ALL)
