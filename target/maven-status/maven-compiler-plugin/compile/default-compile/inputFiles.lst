@@ -1,0 +1,14 @@
+/Users/nescao2/IdeaProjects/smartjob/src/main/java/smartjob/cl/systemUsers/model/responses/UserResponse.java
+/Users/nescao2/IdeaProjects/smartjob/src/main/java/smartjob/cl/systemUsers/util/UserResponseDTOBuilder.java
+/Users/nescao2/IdeaProjects/smartjob/src/main/java/smartjob/cl/systemUsers/repository/PhonesRepository.java
+/Users/nescao2/IdeaProjects/smartjob/src/main/java/smartjob/cl/systemUsers/repository/UsersRepository.java
+/Users/nescao2/IdeaProjects/smartjob/src/main/java/smartjob/cl/systemUsers/entity/UserEntity.java
+/Users/nescao2/IdeaProjects/smartjob/src/main/java/smartjob/cl/systemUsers/entity/PhonesEntity.java
+/Users/nescao2/IdeaProjects/smartjob/src/main/java/smartjob/cl/systemUsers/services/UserService.java
+/Users/nescao2/IdeaProjects/smartjob/src/main/java/smartjob/cl/systemUsers/model/Phones.java
+/Users/nescao2/IdeaProjects/smartjob/src/main/java/smartjob/cl/systemUsers/services/impl/UserServiceImpl.java
+/Users/nescao2/IdeaProjects/smartjob/src/main/java/smartjob/cl/systemUsers/util/PhonesDtoBuilder.java
+/Users/nescao2/IdeaProjects/smartjob/src/main/java/smartjob/cl/systemUsers/SystemUsersApplication.java
+/Users/nescao2/IdeaProjects/smartjob/src/main/java/smartjob/cl/systemUsers/controller/UserController.java
+/Users/nescao2/IdeaProjects/smartjob/src/main/java/smartjob/cl/systemUsers/model/User.java
+/Users/nescao2/IdeaProjects/smartjob/src/main/java/smartjob/cl/systemUsers/util/UserDtoBuilder.java
