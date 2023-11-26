@@ -25,7 +25,7 @@ public class UserController {
     }
 
     @Operation(description = "Get a user by ID")
-    @GetMapping("user/{id}")
+    @GetMapping("user")
     public ResponseEntity<UserResponse> getUserById(@RequestBody User user) {
         UserResponse userResponse = userService.findById(user);
         if (userResponse == null) {
@@ -35,7 +35,7 @@ public class UserController {
     }
 
     @Operation(description = "Update user information")
-    @PutMapping("user/update/{id}")
+    @PutMapping("user")
     public ResponseEntity<UserResponse> updateUser(@RequestBody User user) {
         UserResponse updatedUser = userService.update(user);
         if (updatedUser == null) {
@@ -45,7 +45,7 @@ public class UserController {
     }
 
     @Operation(description = "Delete a user")
-    @DeleteMapping("user/delete/{id}")
+    @DeleteMapping("user")
     public ResponseEntity<UserResponse> deleteUser(@RequestBody User user) {
         UserResponse updatedUser = userService.delete(user);
         if (updatedUser == null) {

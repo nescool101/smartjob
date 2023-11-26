@@ -1,6 +1,7 @@
 package smartjob.cl.systemUsers.model.responses;
 
 import lombok.*;
+import smartjob.cl.systemUsers.model.Session;
 
 import java.time.LocalDateTime;
 
@@ -17,13 +18,12 @@ public class UserResponse {
 
     private LocalDateTime modified;
 
-    private LocalDateTime last_login;
-
-    private String token;
-
-    private Boolean isactive;
-
     private String message;
+
+    private String email;
+
+    private Session session;
+
 
 
 }

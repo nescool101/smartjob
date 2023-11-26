@@ -67,7 +67,12 @@ public class UserServiceImpl implements UserService {
             return null;
         }
         usersRepository.deleteById(userData.getUserId());
-        return null;
+        UserDtoBuilder userDtoBuilder = new UserDtoBuilder();
+        UserResponseDTOBuilder userResponseDTOBuilder = new UserResponseDTOBuilder();
+        UserEntity userEntity = userDtoBuilder.DtoToEntity(userData);
+        UserEntity userEntityOut =usersRepository.save(userEntity);
+
+        return userResponseDTOBuilder.entityToDto(userEntityOut);
     }
 
 }
