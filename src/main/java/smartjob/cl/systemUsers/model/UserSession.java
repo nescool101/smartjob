@@ -3,16 +3,15 @@ package smartjob.cl.systemUsers.model;
 import lombok.*;
 
 import java.time.LocalDateTime;
-import java.util.List;
 
 @NoArgsConstructor
 @AllArgsConstructor
 @Getter
 @Setter
 @Builder
-public class Session {
+public class UserSession {
 
-    private String sessionId;
+    private Long sessionId;
     private String token;
     private LocalDateTime modified;
     private LocalDateTime lastLogin;

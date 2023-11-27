@@ -1,7 +1,7 @@
 package smartjob.cl.systemUsers.model.responses;
 
 import lombok.*;
-import smartjob.cl.systemUsers.model.Session;
+import smartjob.cl.systemUsers.model.UserSession;
 
 import java.time.LocalDateTime;
 
@@ -22,7 +22,7 @@ public class UserResponse {
 
     private String email;
 
-    private Session session;
+    private UserSession session;
 
 
 

@@ -49,11 +49,9 @@ public class UserServiceImpl implements UserService {
     public UserResponse update(User userData) {
         Optional<UserEntity> existingUser = usersRepository.findById(userData.getUserId());
         if (existingUser.isEmpty()) {
-            return null; // O manejar de otra manera si prefieres
+            return null;
         }
-        // Aquí puedes agregar la lógica para actualizar los campos del usuario
         existingUser.get().setName(userData.getName());
-        // Repetir para otros campos necesarios
         UserEntity updatedUser = usersRepository.save(existingUser.get());
         UserResponseDTOBuilder userResponseDTOBuilder = new UserResponseDTOBuilder();
 

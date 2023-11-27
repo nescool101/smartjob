@@ -1,7 +1,7 @@
 package smartjob.cl.systemUsers.util;
 
 import smartjob.cl.systemUsers.entity.UserEntity;
-import smartjob.cl.systemUsers.model.Session;
+import smartjob.cl.systemUsers.model.UserSession;
 import smartjob.cl.systemUsers.model.responses.UserResponse;
 
 import java.util.UUID;
@@ -11,8 +11,8 @@ public class UserResponseDTOBuilder {
     private UserResponse userResponse;
     public UserResponse entityToDto(UserEntity userEntity){
 
-        Session internalSession =Session.builder()
-                .sessionId(UUID.randomUUID().toString())
+        UserSession internalSession = UserSession.builder()
+                .sessionId(userEntity.getUserId())
                 .lastLogin(userEntity.getLastLogin())
                 .token(UUID.randomUUID().toString())
                 .modified(userEntity.getLastModified())
