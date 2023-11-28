@@ -10,6 +10,7 @@ import smartjob.cl.systemUsers.services.SessionService;
 import smartjob.cl.systemUsers.util.SessionDtoBuilder;
 import smartjob.cl.systemUsers.util.SessionResponseDTOBuilder;
 
+import java.time.LocalDateTime;
 import java.util.Optional;
 
 @Service
@@ -52,13 +53,21 @@ public class SessionServiceImpl implements SessionService {
 
     @Override
     @Transactional
-    public UserSession update(UserSession sessionData) {
-        Optional<SessionEntity> existingSession = sessionRepository.findById(sessionData.getSessionId());
+    public UserSession update(Long id, UserSession session) {
+        UserSession sessionResponse = new UserSession();
+        SessionDtoBuilder sessionDtoBuilder = new SessionDtoBuilder();
+
+        Optional<SessionEntity> existingSession = sessionRepository.findById(id);
         if (existingSession.isEmpty()) {
-            return null;
+            return sessionResponse;
         }
-        SessionEntity session = existingSession.get();
-        SessionEntity updatedSession = sessionRepository.save(session);
+
+        SessionEntity sessionEntity = sessionDtoBuilder.dtoToEntity(session);
+        sessionEntity.setSessionId(existingSession.get().getSessionId());
+        sessionEntity.setLastLogin(LocalDateTime.now());
+        sessionEntity.setToken(existingSession.get().getToken());
+
+        SessionEntity updatedSession = sessionRepository.save(sessionEntity);
         SessionResponseDTOBuilder sessionResponseDTOBuilder = new SessionResponseDTOBuilder();
 
         return sessionResponseDTOBuilder.entityToDto(updatedSession);

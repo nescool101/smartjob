@@ -6,7 +6,7 @@ public interface SessionService {
 
     UserSession save(UserSession session);
     UserSession findById(Long id);
-    UserSession update(UserSession session);
+    UserSession update(Long id, UserSession session);
     boolean delete(Long id);
 
 }

@@ -38,7 +38,7 @@ public class SessionController {
     @Operation(description = "Update session information")
     @PutMapping("session/{id}")
     public ResponseEntity<UserSession> updateSession(@PathVariable Long id, @RequestBody UserSession session) {
-        UserSession updatedSession = sessionService.update(session);
+        UserSession updatedSession = sessionService.update(id, session);
         if (updatedSession == null) {
             return ResponseEntity.status(HttpStatus.NOT_FOUND).body(null);
         }

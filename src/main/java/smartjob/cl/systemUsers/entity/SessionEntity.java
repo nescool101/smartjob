@@ -25,6 +25,9 @@ public class SessionEntity {
     private String email;
 
     private String password;
+    private String token;
+    private LocalDateTime modified;
+    private boolean active;
 
     private LocalDateTime dateCreated;
 
